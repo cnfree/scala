@@ -1,4 +1,5 @@
 package scala.example.implicitly
+import scala.language.implicitConversions
 
 /**
  * Pixel转成Dp的实现, 缺省构造函数Any对外不可见
