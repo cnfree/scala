@@ -16,7 +16,7 @@ object Println {
   def |:(obj: Any) = println(obj)
 }
 
-object ColonOperator extends App {
+object ColonOperator {
 
   //定义隐式转换方法
   implicit def pipify[T](t: T) = new {
@@ -28,11 +28,13 @@ object ColonOperator extends App {
 
   def json(obj: Map[_, _]) = obj |: Json
 
-  //原始的自定义管道操作符
-  (Map("a" -> 1, "b" -> 2) |: Json) |: Println
+  def main(args: Array[String]) {
+    //原始的自定义管道操作符
+    (Map("a" -> 1, "b" -> 2) |: Json) |: Println
 
-  //使用隐式转换的自定义管道操作符
-  Map("a" -> 1, "b" -> 2) | json | println
+    "Hello Pipe" | println
 
-  "Hello Pipe" | println
+    //使用隐式转换的自定义管道操作符
+    Map("a" -> 1, "b" -> 2) | json | println
+  }
 }
