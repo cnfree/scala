@@ -1,4 +1,4 @@
-package scala.example.io.sort
+package scala.example.sort
 
 /**
  * 快速排序

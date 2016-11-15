@@ -1,4 +1,4 @@
-package scala.example.io.sort
+package scala.example.sort
 
 import scala.collection.mutable.ArrayBuilder
 import scala.util.Random

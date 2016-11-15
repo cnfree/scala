@@ -1,4 +1,4 @@
-package scala.example.io.sort
+package scala.example.sort
 
 import scala.Ordering
 import scala.annotation.tailrec
