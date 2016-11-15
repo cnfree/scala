@@ -19,7 +19,7 @@ object UsingAnyResource {
         block(x);
       } finally {
         for (i <- 0 until x.productArity; elem = x.productElement(i)) {
-          //判断是否为Closeable, type Closeable为refinement，scala不支持直接的模式匹配，需要自定义模式匹配
+          //判断是否为Closeable, type Closeable为refinement，scala不支持直接的模式匹配，需要自定义模式匹配, 用抽取器获得closeable
           elem match {
             case isCloseable(closeable) => closeable.close()
             case _                      =>
